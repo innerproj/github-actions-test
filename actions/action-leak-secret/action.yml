@@ -5,6 +5,7 @@ inputs:
     description: 'input data'
     required: true
     default: 'leak me'
-using: "composite"
+runs:
+  using: "composite"
   steps:
   - run: echo "Masked"
