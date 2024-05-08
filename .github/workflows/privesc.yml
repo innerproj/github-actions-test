@@ -10,9 +10,9 @@ on:
 jobs:
   whoami:
     runs-on: ubuntu-latest
+    env:
+      SOME_EVENT: ${{ github.event.workflow_run }}
     steps:
       - name: whoami
-        env:
-          SOME_EVENT: ${{ github.event.workflow_run }}
         run: |
           echo "Im workflow run"; echo "$SOME_EVENT"
