@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: whoami
         env:
-          EVENT: ${{ github.event.workflow_run }}
+          SOME_EVENT: ${{ github.event.workflow_run }}
         run: |
-          echo "Im workflow run"; echo "$EVENT"
+          echo "Im workflow run"; echo "$SOME_EVENT"
