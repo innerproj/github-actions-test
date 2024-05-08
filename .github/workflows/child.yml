@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: whoami
         run: |
-          "echo 'Im child'"
+          echo "I'm child"

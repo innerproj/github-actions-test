@@ -15,4 +15,4 @@ jobs:
         env:
           EVENT: ${{ github.event.workflow_run }}
         run: |
-          "echo 'Im workflow run'; echo $EVENT"
+          echo "Im workflow run"; echo "$EVENT"
