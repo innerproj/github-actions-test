@@ -1,0 +1,16 @@
+name: Child
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  whoami:
+    runs-on: ubuntu
+    steps:
+      - name: whoami
+        run: |
+          "echo 'Im child'"
