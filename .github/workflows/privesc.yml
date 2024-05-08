@@ -5,7 +5,6 @@ on:
     workflows: ["Child"]
     types:
       - completed
-    branches: ["dev"]
 
 jobs:
   whoami:
