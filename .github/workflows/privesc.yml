@@ -1,0 +1,18 @@
+name: Workflow Run
+
+on:
+  workflow_run:
+    workflows: ["Child"]
+    types:
+      - completed
+    branches: ["dev"]
+
+jobs:
+  whoami:
+    runs-on: ubuntu
+    steps:
+      - name: whoami
+        env:
+          EVENT: ${{ github.event.workflow_run }}
+        run: |
+          "echo 'Im workflow run'; echo $EVENT"
