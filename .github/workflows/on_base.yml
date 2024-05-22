@@ -3,8 +3,6 @@ name: On Base
 on:
   workflow_run:
     workflows: [ "Base Workflow" ]
-    branches:
-      - test
     types:
       - completed
 
