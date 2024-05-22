@@ -1,6 +1,8 @@
 name: Base Workflow
 on:
   pull_request:
+    branches:
+      - test
 
 jobs:
   whoami:
