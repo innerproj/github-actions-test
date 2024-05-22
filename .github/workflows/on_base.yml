@@ -1,0 +1,17 @@
+name: On Base
+
+on:
+  workflow_run:
+    workflows: [ "Base" ]
+    branches:
+      - test
+    types:
+      - completed
+
+jobs:
+  whoami:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Branch Name
+        run: |
+          echo "${{ github.event.workflow_run.head_branch }}"
