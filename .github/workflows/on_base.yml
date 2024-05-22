@@ -2,7 +2,7 @@ name: On Base
 
 on:
   workflow_run:
-    workflows: [ "Base" ]
+    workflows: [ "Base Workflow" ]
     branches:
       - test
     types:
